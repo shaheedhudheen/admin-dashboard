@@ -1,0 +1,121 @@
+:root{
+   --primary-color: #E65c4f;
+   --secondary-color: #326789;
+   --background-color: #e9eef4;
+   --color: #78a6cb;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.container {
+    padding: 1rem;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 6fr;
+  background-color: aliceblue;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main-content";
+}
+
+.sidebar{
+    grid-area: sidebar;
+
+}
+
+.header {
+  grid-area: header;
+  display: grid;
+  padding: 1rem 1.5rem;
+  gap: 2rem;
+  align-items: center;
+}
+
+.header-p1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.header-search{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: center;
+}
+.header-profile{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    gap: 1rem;
+}
+
+.header-p2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.header-welcome{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.welcome-text{
+    font-weight: 600;
+}
+#welcome-text2{
+    font-size: 2rem;
+}
+
+button{
+    padding: .7rem 1.7rem;
+    border-style: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+input[type="search"]{
+    padding: .7rem 1.7rem;
+    border-style: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    background-color: var(--color);
+}
+
+#profile-pic{
+    width: 50px;
+    margin: 0 .5rem;
+}
+
+.main-content {
+  background-color: #facc15;
+  grid-area: main-content;
+}
+
+#search-icon,
+#notification{
+    width: 2rem;
+}
+
+#welcome-pic{
+    width: 100px;
+}
+
+img[alt="profile"]{
+    width: 50px;
+}
